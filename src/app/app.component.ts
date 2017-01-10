@@ -2,8 +2,14 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
+//import { Page1 } from '../pages/page1/page1';
+//import { Page2 } from '../pages/page2/page2';
+import { LoginPage } from '../pages/login/login';
+import { SellingPage } from '../pages/selling/selling';
+import { TotalSalesPage } from '../pages/total-sales/total-sales';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { ReportProblemPage } from '../pages/report-problem/report-problem';
+import { SqllitePage } from '../pages/sqllite/sqllite';
 
 
 @Component({
@@ -12,7 +18,8 @@ import { Page2 } from '../pages/page2/page2';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+//  rootPage: any = Page1;
+  rootPage: any = SqllitePage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +28,14 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 }
+      //{ title: 'Page One', component: Page1 },
+      //{ title: 'Page Two', component: Page2 }
+      { title: 'Login', component: LoginPage },
+      { title: 'Selling', component: SellingPage },
+      { title: 'Total Sales', component: TotalSalesPage },
+      { title: 'ContactUs', component: ContactUsPage },
+      { title: 'Report Problem', component: ReportProblemPage },
+      { title: 'SQL Lite', component: SqllitePage }
     ];
 
   }

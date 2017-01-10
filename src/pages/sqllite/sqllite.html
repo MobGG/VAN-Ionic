@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sql Lite</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1>Sql Lite</h1>
+
+  <ion-item>
+    <ion-label> ID </ion-label>
+    <ion-input type="text" [(ngModel)] = "person.id"></ion-input>
+  </ion-item>
+
+  <ion-item>
+  <ion-label> First Name </ion-label>
+  <ion-input type="text" [(ngModel)] = "person.firstname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label> Last Name </ion-label>
+    <ion-input type="text" [(ngModel)] = "person.lastname"></ion-input>
+  </ion-item>
+
+  <button (click)="refresh()" ion-button icon-left>
+    <ion-icon name="refresh-circle"></ion-icon>
+    Select
+  </button>
+
+  <button (click)="add()" ion-button icon-left>
+    <ion-icon name="add-circle"></ion-icon>
+    Insert
+  </button>
+
+  <button (click)="update()" ion-button ion-left>
+    <ion-icon name="create"></ion-icon>
+    Update
+  </button>
+
+  <button (click)="delete()" ion-button icon-left>
+    <ion-icon name="trash"></ion-icon>
+    Delete
+  </button>
+
+  <ion-grid>
+    <!-- Header -->
+    <ion-row>
+      <ion-col>
+        <strong>First Name</strong>
+      </ion-col>
+      <ion-col>
+        <strong>Last Name</strong>
+      </ion-col>
+    </ion-row>
+
+    <!-- Body -->
+    <ion-row *ngFor="let person of people">
+      <ion-col>
+        {{person.firstname}}
+      </ion-col>
+      <ion-col>
+        {{person.lastname}}
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
