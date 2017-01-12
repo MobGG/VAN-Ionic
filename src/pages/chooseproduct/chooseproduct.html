@@ -13,21 +13,16 @@
   <p><b>ที่อยู่</b> {{shopSelectedDetailShopAddress}}</p>
   <p><b>ชนิด</b> {{shopSelectedDetailShopType}}</p>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col width-50><p>Bill No.</p></ion-col>
-      <ion-col width-40 offset-60>
-        <ion-label>เลือก สร.</ion-label>
-        <ion-select [(ngModel)]="store">
-          <ion-option value="R000">
-            R000
-          </ion-option>
-          <ion-option value="R000">
-            R111
-          </ion-option>
-        </ion-select>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+
+  <p>Bill No. 100002000030000</p>
+
+  <ion-item>
+    <ion-label>เลือก สร.</ion-label>
+    <ion-select (ionChange)="getStore()" [(ngModel)]="store">
+      <ion-option value={{store.storeId}} *ngFor="let store of stores">
+        {{store.storeName}}
+      </ion-option>
+    </ion-select>
+  </ion-item>
 
 </ion-content>

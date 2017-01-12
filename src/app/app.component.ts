@@ -7,6 +7,7 @@ import { SqllitePage } from '../pages/sqllite/sqllite';
 import { UsersPage } from '../pages/users/users';
 
 import { ChooseshopPage } from '../pages/chooseshop/chooseshop';
+import { ChooseproductPage } from '../pages/chooseproduct/chooseproduct';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +15,8 @@ import { ChooseshopPage } from '../pages/chooseshop/chooseshop';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ChooseshopPage;
+  // rootPage: any = ChooseshopPage;
+  rootPage: any = ChooseproductPage;
 
   pages: Array<{title: string, component: any}>;
 
