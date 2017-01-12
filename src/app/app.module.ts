@@ -1,26 +1,25 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-//import { Page1 } from '../pages/page1/page1';
-//import { Page2 } from '../pages/page2/page2';
-import { LoginPage } from '../pages/login/login';
-import { SellingPage } from '../pages/selling/selling';
-import { TotalSalesPage } from '../pages/total-sales/total-sales';
-import { ContactUsPage } from '../pages/contact-us/contact-us';
-import { ReportProblemPage } from '../pages/report-problem/report-problem';
+
 import { SqllitePage } from '../pages/sqllite/sqllite';
 
+import { UsersPage } from '../pages/users/users';
+import {UserDetailsPage } from '../pages/user-details/user-details';
+
+import { ChooseshopPage } from '../pages/chooseshop/chooseshop';
+import { ChooseproductPage } from '../pages/chooseproduct/chooseproduct';
+
+import { GithubUsers } from '../providers/github-users';
+
 @NgModule({
-  declarations: [
+    declarations: [
     MyApp,
-//    Page1,
-//    Page2
-    LoginPage,
-    SellingPage,
-    TotalSalesPage,
-    ContactUsPage,
-    ReportProblemPage,
-    SqllitePage
+    SqllitePage,
+    UsersPage,
+    UserDetailsPage,
+    ChooseshopPage,
+    ChooseproductPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -28,15 +27,13 @@ import { SqllitePage } from '../pages/sqllite/sqllite';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-//    Page1,
-//    Page2
-    LoginPage,
-    SellingPage,
-    TotalSalesPage,
-    ContactUsPage,
-    ReportProblemPage,
-    SqllitePage
+    SqllitePage,
+    UsersPage,
+    UserDetailsPage,
+    ChooseshopPage,
+    ChooseproductPage,
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},GithubUsers]
+
 })
 export class AppModule {}

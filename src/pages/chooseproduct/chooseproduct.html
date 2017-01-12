@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>เลือกสินค้า</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p><b>รหัส</b> {{shopSelectedDetailShopCode}}</p>
+  <p><b>ชื่อร้าน</b> {{shopSelectedDetailShopName}}</p>
+  <p><b>ที่อยู่</b> {{shopSelectedDetailShopAddress}}</p>
+  <p><b>ชนิด</b> {{shopSelectedDetailShopType}}</p>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50><p>Bill No.</p></ion-col>
+      <ion-col width-40 offset-60>
+        <ion-label>เลือก สร.</ion-label>
+        <ion-select [(ngModel)]="store">
+          <ion-option value="R000">
+            R000
+          </ion-option>
+          <ion-option value="R000">
+            R111
+          </ion-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

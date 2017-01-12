@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>เลือกร้าน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>เลือกลูกค้า</ion-label>
+      <ion-select (ionChange)="getShopDetail()" [(ngModel)]="shopSelectedId">
+        <ion-option value={{shop.id}} *ngFor="let shop of shops">
+          {{shop.shopName}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <h2>รายละเอียด</h2>
+  <p><b>รหัส</b> {{shopSelectedDetailShopCode}}</p>
+  <p><b>ชื่อร้าน</b> {{shopSelectedDetailShopName}}</p>
+  <p><b>ที่อยู่</b> {{shopSelectedDetailShopAddress}}</p>
+  <p><b>ชนิด</b> {{shopSelectedDetailShopType}}</p>
+
+  <button (click)="chooseProduct()" ion-button icon-left>
+    <ion-icon name="ios-basket"></ion-icon>
+    เลือกสินค้า
+  </button>
+
+
+</ion-content>
