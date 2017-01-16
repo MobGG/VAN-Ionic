@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>เลือกประเภทการจ่ายเงิน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button [navPush]="BillcashPage" ion-button block >เงินสด</button>
+  <button [navPush]="BillchequePage" ion-button block>เชค</button>
+  <button [navPush]="BillcreditPage" ion-button block>เชื่อ</button>
+</ion-content>

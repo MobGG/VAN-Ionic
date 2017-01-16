@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Main Menu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <button [navPush]="ShopPage" ion-button block >เปิด Order ใหม่</button>
+  <button [navPush]="ShopPage" ion-button block>เยี่ยมลูกค้า</button>
+  <button [navPush]="PaymentPage" ion-button block>เก็บเงินค้างจ่าย</button>
+
+</ion-content>

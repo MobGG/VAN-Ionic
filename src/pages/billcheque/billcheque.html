@@ -1,18 +1,130 @@
-<!--
-  Generated template for the Billcheque page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>billcheque</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>บิลเชค</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+  <h2>บิลเชค</h2>
+  <p>บิลเลขที่ : 100001</p>
+  <br>
+  <p><b>รายการสินค้า</b></p>
+
+  <!--header-->
+  <ion-row>
+    <ion-col>
+      <strong>ชื่อสิค้า</strong>
+    </ion-col>
+    <ion-col>
+      <strong>จำนวน</strong>
+    </ion-col>
+    <ion-col>
+      <strong>ราคา</strong>
+    </ion-col>
+  </ion-row>
+
+  <!--content-->
+  <ion-row>
+    <ion-col>
+      <strong>มาม่า</strong>
+    </ion-col>
+    <ion-col>
+      <strong>1 ลัง</strong>
+    </ion-col>
+    <ion-col>
+      <strong>100 บาท</strong>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <strong>ยูนิฟ</strong>
+    </ion-col>
+    <ion-col>
+      <strong>2 ลัง</strong>
+    </ion-col>
+    <ion-col>
+      <strong>200 บาท</strong>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <strong>มองต์เฟลอ</strong>
+    </ion-col>
+    <ion-col>
+      <strong>3 ลัง</strong>
+    </ion-col>
+    <ion-col>
+      <strong>300 บาท</strong>
+    </ion-col>
+  </ion-row>
+  <br>
+
+  <!--result-->
+  <ion-row>
+    <ion-col>
+      <strong></strong>
+    </ion-col>
+    <ion-col>
+      <strong>ราคารวม</strong>
+    </ion-col>
+    <ion-col>
+      <strong>600 บาท</strong>
+    </ion-col>
+  </ion-row>
+  <br>
+  <br>
+
+  <!--Signature-->
+  <ion-row>
+    <ion-col>
+      <strong>ผู้จ่ายเชค</strong>
+    </ion-col>
+    <ion-col>
+      <strong>ผู้รับเชค</strong>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <strong>...........................</strong>
+    </ion-col>
+    <ion-col>
+      <strong>...........................</strong>
+    </ion-col>
+  </ion-row>
+
+  <!--formcheque-->
+  <ion-item>
+    <ion-label color="primary" stacked>จำนวนเงิน</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked>เลขที่เชค</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked>วันที่เชค</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked>ธนาคาร</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked>สาขา</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked>เลขที่บัญชี</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <br>
+  <br>
+
+
+  <!--print-->
+  <button ion-button>Print Bill</button>
 
 </ion-content>

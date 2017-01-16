@@ -8,6 +8,11 @@ import { UsersPage } from '../pages/users/users';
 
 import { ChooseshopPage } from '../pages/chooseshop/chooseshop';
 import { ChooseproductPage } from '../pages/chooseproduct/chooseproduct';
+import { MainmenuPage } from '../pages/mainmenu/mainmenu';
+import { BillcashPage } from '../pages/billcash/billcash';
+import { BillchequePage } from '../pages/billcheque/billcheque';
+import { BillcreditPage } from '../pages/billcredit/billcredit';
+import {ShopPage} from '../pages/shop/shop';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +21,11 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // rootPage: any = ChooseshopPage;
-  rootPage: any = ChooseproductPage;
+  // rootPage: any = ChooseproductPage;
+  // rootPage: any = MainmenuPage;
+  // rootPage: any = BillcashPage;
+  // rootPage: any = BillchequePage;
+  rootPage: any = BillcreditPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -28,6 +37,7 @@ export class MyApp {
       { title: 'Sale Order', component: ChooseshopPage },
       { title: 'SQL Lite', component: SqllitePage },
       { title: 'Users', component: UsersPage },
+      { title: 'Main Menu', component: MainmenuPage },
     ];
 
   }
