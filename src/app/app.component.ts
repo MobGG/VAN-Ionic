@@ -25,7 +25,8 @@ export class MyApp {
   // rootPage: any = MainmenuPage;
   // rootPage: any = BillcashPage;
   // rootPage: any = BillchequePage;
-  rootPage: any = BillcreditPage;
+  // rootPage: any = BillcreditPage;
+  rootPage: any = ShopPage;
 
   pages: Array<{title: string, component: any}>;
 
